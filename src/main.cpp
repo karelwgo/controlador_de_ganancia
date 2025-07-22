@@ -24,7 +24,7 @@ void setup() {
 
 void loop() {
   t2 = millis();
-  controlador.getMeasure(15);//10 muestras
+  controlador.getMeasure(15);//15 muestras
   
 
   if(t2 - t1 >= delta)//polling
