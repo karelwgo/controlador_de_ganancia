@@ -1,1 +1,1 @@
-# controlador_de_ganancia
+# Control de potencia
