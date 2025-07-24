@@ -63,7 +63,8 @@ void pid::calculate_out(float reference)
     Up = _Kp * error[0];
     //Acción integral
     Ui = Ui + _periodo_ms * 0.001f * error[0] * _Ki;
-    if(abs(Ui)>4095)Ui = 4095;
+    if(Ui>4095)Ui = 4095;
+    if(Ui<-4095)Ui = -4095;
     //Acción derivativa
     Ud =  _Kd * (error[0] - error[1])/(_periodo_ms * 0.001f);
 
