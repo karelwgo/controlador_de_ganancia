@@ -5,7 +5,7 @@ pid controlador;
 
 unsigned long t1,t2;
 uint16_t delta = 50;
-const float Kp = 2, Kd = 0.0f, Ki = 32.0f;
+const float Kp = 0, Kd = 0.0f, Ki = 32.0f;
 const uint8_t pin = 34; 
 const uint8_t pin_base = 12;
 
@@ -33,10 +33,11 @@ void loop() {
     controlador.calculate_out(referencia);
     controlador.writePort();
   }
-  Serial.print("in=");
+  // Serial.print("in=");
+  // Serial.println(controlador.in_k);
+  // Serial.print("error=");
+  // Serial.println(controlador.error[0]);
+  // Serial.print("out=");
+  // Serial.println(controlador.output);
   Serial.println(controlador.in_k);
-  Serial.print("error=");
-  Serial.println(controlador.error[0]);
-  Serial.print("out=");
-  Serial.println(controlador.output);
 }

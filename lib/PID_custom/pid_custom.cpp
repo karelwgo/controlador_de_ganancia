@@ -57,7 +57,7 @@ void pid::calculate_out(float reference)
 
     // Calcular error | ejecutar getMeasure previamente
     error[0] = -(reference - in_k); //Error negativo por la proporcionalidad inversa con el actuador
-    if(abs(error[0])<=20)error[0]=0;
+    if(abs(error[0])<=25)error[0]=0;
 
     //Acción proporcional
     Up = _Kp * error[0];
