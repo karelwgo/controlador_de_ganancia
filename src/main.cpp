@@ -33,11 +33,10 @@ void loop() {
     controlador.calculate_out(referencia);
     controlador.writePort();
   }
-  // Serial.print("in=");
-  // Serial.println(controlador.in_k);
-  // Serial.print("error=");
-  // Serial.println(controlador.error[0]);
-  // Serial.print("out=");
-  // Serial.println(controlador.output);
+  Serial.print("in=");
   Serial.println(controlador.in_k);
+  Serial.print("error=");
+  Serial.println(controlador.error[0]);
+  Serial.print("out=");
+  Serial.println(controlador.output);
 }
