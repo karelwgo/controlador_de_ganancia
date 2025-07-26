@@ -10,14 +10,14 @@ const uint8_t pin = 34;
 const uint8_t pin_base = 12;
 
 //float referencia = 1170;
-float referencia = 800;
+float referencia = 300;
 float factor = 1; //factor para llevar de dBm a voltaje del detectro RMS
 
 void setup() {
   controlador.setup(pin, pin_base, Kp, Ki, Kd, delta);
   Serial.begin(115200);
   for(int i=0;i<6;i++){
-    digitalWrite(pin_base+i,(i==0 || i==5)?0:1);
+    digitalWrite(pin_base+i,0);
   }
   t1 = millis();
 }

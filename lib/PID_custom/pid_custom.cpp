@@ -49,7 +49,7 @@ void pid::getMeasure(const uint8_t order)
         while (micros() < t_objetivo);
     }
 
-    in_k = suma / n; // promedio
+    in_k = (suma / n)*1.32*1.04; // promedio
 }
 
 void pid::calculate_out(float reference)
